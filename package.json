@@ -1,0 +1,14 @@
+{
+  "name": "hash-challenge",
+  "version": "1.0.0",
+  "description": "App de cálculo de antecipação",
+  "main": "index.js",
+  "author": "Anderson Malheiro de Carvalho",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^24.9.0"
+  }
+}
