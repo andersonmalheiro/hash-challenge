@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Simulador de Antecipação</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://unpkg.com/imask"></script>
+    <script src="scripts/index.js"></script>
   </head>
-  <body>
+  <body onload="main()">
     <div class="container">
       <div class="card">
         <div class="left-content">
@@ -17,14 +19,7 @@
               <label for="value">Informe o valor da venda *</label>
               <div class="prefix-input">
                 <span class="prefix">R$:</span>
-                <input
-                  id="value"
-                  type="number"
-                  step="0.01"
-                  min="0"
-                  class="main-input"
-                  required
-                />
+                <input id="value" type="text" class="main-input" required />
               </div>
             </div>
 
@@ -34,6 +29,8 @@
                 id="installments"
                 type="number"
                 class="main-input"
+                min="1"
+                max="12"
                 required
               />
               <small class="text-muted">Máximo de 12 parcelas</small>
@@ -41,7 +38,13 @@
 
             <div class="input-group">
               <label for="mdr">Informe o percentual MDR *</label>
-              <input id="mdr" type="number" class="main-input" required />
+              <input
+                id="mdr"
+                type="number"
+                class="main-input"
+                required
+                min="1"
+              />
             </div>
           </form>
         </div>
